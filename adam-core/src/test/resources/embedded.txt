@@ -1,0 +1,47 @@
+{
+	initial_state:"it.polimi.adam.app.ClassWithImplementations.one",
+	metrics:{
+		"rt":{name:"rt", limit:"upper", aggregator:"+"},
+		"e":{name:"e", limit:"upper", aggregator:"+"},
+		"u":{name:"u", limit:"lower", aggregator:"+"}	
+	},
+	requirements: [
+		{name:"rq1", metric:{name:"e"}, value:5, essential:true, weight:0.3},
+		{name:"rq2", metric:{name:"e"}, policy:"max", essential:false, weight:0.1},
+		{name:"rq3", metric:{name:"rt"}, value: 1200, essential:true, weight:0.3},
+		{name:"rq4", metric:{name:"u"}, value:3, essential:true, weight:0.3}
+	],
+	states:{
+		"it.polimi.adam.app.ClassWithImplementations.one":{	
+				name: "it.polimi.adam.app.ClassWithImplementations.one",
+				impacts:{rt:500,e:1,u:1},
+				transition_condition:"it.polimi.adam.app.ClassWithImplementations.hasAutoFocus",
+				connections:[{state:{name:"it.polimi.adam.app.ClassWithImplementations.two"}, label:"true"}, {state:{name:"it.polimi.adam.app.ClassWithImplementations.three"}, label:"false"}],
+				intervals:{
+					rt: {min:500,max:2000},
+					e: {min:3,max:5},
+					u: {min:1,max:6}
+				}
+		},
+		"it.polimi.adam.app.ClassWithImplementations.two":{
+			name: "it.polimi.adam.app.ClassWithImplementations.two",
+			impacts:{rt:700,e:2,u:3},
+			connections:[{state:{name:"it.polimi.adam.app.ClassWithImplementations.three"}}],
+			intervals:{
+				rt: {min:200,max:1000},
+				e: {min:3,max:7},
+				u: {min:2,max:5}
+			}
+		},
+		
+		"it.polimi.adam.app.ClassWithImplementations.three":{
+			name: "it.polimi.adam.app.ClassWithImplementations.three",
+			impacts:{rt:500,e:1,u:1},
+			intervals:{
+				rt: {min:1000,max:3000},
+				e: {min:12,max:16},
+				u: {min:3,max:5}
+			}
+		}
+	}
+}
