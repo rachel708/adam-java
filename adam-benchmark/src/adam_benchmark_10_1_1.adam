@@ -1,0 +1,213 @@
+{
+  "initial_state": "adam.benchmark.Components.method_1_alternative_1",
+  "metrics": {
+    "m1": {
+      "name": "m1",
+      "limit": "upper",
+      "aggregator": "+"
+    }
+  },
+  "requirements": [
+    {
+      "name": "rq1_1",
+      "metric": {
+        "name": "m1"
+      },
+      "value": 10000,
+      "essential": true
+    },
+    {
+      "name": "rq1_2",
+      "metric": {
+        "name": "m1"
+      },
+      "policy": "min",
+      "essential": true
+    }
+  ],
+  "states": {
+    "adam.benchmark.Components.method_1_alternative_1": {
+      "name": "adam.benchmark.Components.method_1_alternative_1",
+      "impacts": {
+        "m1": 740
+      },
+      "intervals": {
+        "m1": {
+          "min": 1690,
+          "max": 8240
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_2_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_2_alternative_1": {
+      "name": "adam.benchmark.Components.method_2_alternative_1",
+      "impacts": {
+        "m1": 520
+      },
+      "intervals": {
+        "m1": {
+          "min": 1629,
+          "max": 8901
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_3_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_3_alternative_1": {
+      "name": "adam.benchmark.Components.method_3_alternative_1",
+      "impacts": {
+        "m1": 737
+      },
+      "intervals": {
+        "m1": {
+          "min": 2976,
+          "max": 6840
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_4_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_4_alternative_1": {
+      "name": "adam.benchmark.Components.method_4_alternative_1",
+      "impacts": {
+        "m1": 295
+      },
+      "intervals": {
+        "m1": {
+          "min": 1820,
+          "max": 4102
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_5_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_5_alternative_1": {
+      "name": "adam.benchmark.Components.method_5_alternative_1",
+      "impacts": {
+        "m1": 362
+      },
+      "intervals": {
+        "m1": {
+          "min": 300,
+          "max": 648
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_6_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_6_alternative_1": {
+      "name": "adam.benchmark.Components.method_6_alternative_1",
+      "impacts": {
+        "m1": 836
+      },
+      "intervals": {
+        "m1": {
+          "min": 445,
+          "max": 805
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_7_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_7_alternative_1": {
+      "name": "adam.benchmark.Components.method_7_alternative_1",
+      "impacts": {
+        "m1": 703
+      },
+      "intervals": {
+        "m1": {
+          "min": 1480,
+          "max": 4052
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_8_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_8_alternative_1": {
+      "name": "adam.benchmark.Components.method_8_alternative_1",
+      "impacts": {
+        "m1": 146
+      },
+      "intervals": {
+        "m1": {
+          "min": 393,
+          "max": 2259
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_9_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_9_alternative_1": {
+      "name": "adam.benchmark.Components.method_9_alternative_1",
+      "impacts": {
+        "m1": 463
+      },
+      "intervals": {
+        "m1": {
+          "min": 884,
+          "max": 2788
+        }
+      },
+      "connections": [
+        {
+          "state": {
+            "name": "adam.benchmark.Components.method_10_alternative_1"
+          }
+        }
+      ]
+    },
+    "adam.benchmark.Components.method_10_alternative_1": {
+      "name": "adam.benchmark.Components.method_10_alternative_1",
+      "impacts": {
+        "m1": 589
+      },
+      "intervals": {
+        "m1": {
+          "min": 589,
+          "max": 589
+        }
+      }
+    }
+  }
+}
